@@ -1,0 +1,37 @@
+spring:
+  neo4j:
+    uri: bolt://localhost:7687
+    authentication:
+      username: neo4j
+      password: 1234qwer
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/malegownkg?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: malegown
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+minio:
+  endpoint: http://localhost:9000
+  access-key: B48GS01YZ9l8rpo4QCDv
+  secret-key: K6SfOvEBhmYtuuJiE8U7ohnoECQk2D3Vhh1Zh2HL
+  bucket-name: grownkg
+
+
